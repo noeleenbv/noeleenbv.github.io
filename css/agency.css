@@ -321,7 +321,7 @@ section h3.section-subheading {
 #portfolio .portfolio-item .portfolio-link {
     display: block;
     position: relative;
-    max-width: 800px;
+    max-width: 400px;
     margin: 0 auto
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
@@ -355,7 +355,7 @@ section h3.section-subheading {
     margin: 0
 }
 #portfolio .portfolio-item .portfolio-caption {
-    max-width: 800px;
+    max-width: 400px;
     margin: 0 auto;
     background-color: #333;
     text-align: center;
@@ -379,9 +379,16 @@ section h3.section-subheading {
     z-index: 2
 }
 @media (min-width: 767px) {
-    #portfolio .portfolio-item {
-        margin: 0 0 30px
-    }
+#portfolio .portfolio-item {
+    margin: 0 0 30px
+}
+#portfolio .portfolio-item .portfolio-link {
+    max-width: 800px;
+}
+#portfolio .portfolio-item .portfolio-caption {
+    max-width: 800px;
+}
+
 }
 
 /*/ ----- ABOUT SECTION ----- /*/
@@ -449,7 +456,6 @@ section h3.section-subheading {
     .timeline>li .timeline-panel {
         width: 60%;
         float: left;
-        text-align: right
     }
     .timeline>li .timeline-image {
         float: left;
@@ -474,7 +480,7 @@ section h3.section-subheading {
         min-height: 170px
     }
     .timeline>li .timeline-panel {
-        padding: 30px 30px 20px 100px
+        padding: 30px 30px 20px 90px
     }
 }
 

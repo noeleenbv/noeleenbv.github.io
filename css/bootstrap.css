@@ -1586,17 +1586,17 @@ pre code {
     margin-right: auto;
     margin-left: auto
 }
-@media (min-width: 768px) {
+@media (min-width: 980px) {
     .container {
-        width: 750px;
-    }
-}
-@media (min-width: 992px) {
-    .container {
-        width: 970px;
+        width: 950px;
     }
 }
 @media (min-width: 1200px) {
+    .container {
+        width: 1100px;
+    }
+}
+@media (min-width: 1480px) {
     .container {
         width: 1470px;
     }
@@ -1831,7 +1831,7 @@ pre code {
 .col-xs-offset-0 {
     margin-left: 0
 }
-@media (min-width: 768px) {
+@media (min-width: 668px) {
     .col-sm-1,
     .col-sm-10,
     .col-sm-11,
