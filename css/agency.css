@@ -3,7 +3,7 @@ body {
     font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 .text-muted {
-    color: #777
+    color: #888
 }
 .text-primary {
     color: #60be6c
@@ -144,12 +144,12 @@ fieldset[disabled] .btn-xl.active {
 /*/ ----- NAV SECTION ----- /*/
 
 .navbar-default {
-    background-color: #222;
-    border-color: transparent
-}
+    background-color: rgba(34,34,34,0.9);
+    border-color: transparent;
+} 
 .navbar-default .navbar-brand {
-    color: #F7AA26;
-    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive
+    color: #FFFFFF;
+    font-family: "Josefin+Sans", "Helvetica Neue", Helvetica, Arial, cursive
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
@@ -158,7 +158,7 @@ fieldset[disabled] .btn-xl.active {
     color: #F7AA26
 }
 .navbar-default .navbar-collapse {
-    border-color: rgba(255, 255, 255, .02)
+    border-color: rgba(255, 255, 255)
 }
 .navbar-default .navbar-toggle {
     background-color: #60be6c;
@@ -172,7 +172,7 @@ fieldset[disabled] .btn-xl.active {
     background-color: #60be6c
 }
 .navbar-default .nav li a {
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 1px;
@@ -188,6 +188,9 @@ fieldset[disabled] .btn-xl.active {
     color: #fff;
     background-color: #60be6c
 }
+.navbar-default.navbar-shrink {
+        background-color: rgba(34,34,34,1);
+    }
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     color: #fff;
@@ -195,7 +198,7 @@ fieldset[disabled] .btn-xl.active {
 }
 @media (min-width: 768px) {
     .navbar-default {
-        background-color: transparent;
+        background-color: rgba(34,34,34,0.7);
         padding: 25px 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
@@ -212,7 +215,7 @@ fieldset[disabled] .btn-xl.active {
         border-radius: 3px
     }
     .navbar-default.navbar-shrink {
-        background-color: #222;
+        background-color: rgba(34,34,34,1);
         padding: 10px 0
     }
     .navbar-default.navbar-shrink .navbar-brand {
@@ -234,6 +237,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 }
+
 header {
     background-image: url(../img/header-bg.jpg);
     background-repeat: none;
@@ -247,18 +251,18 @@ header {
     color: #fff
 }
 header .intro-text {
-    padding-top: 100px;
+    padding-top: 150px;
     padding-bottom: 50px
 }
 header .intro-text .intro-lead-in {
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
-    font-size: 22px;
+    font-size: 27px;
     line-height: 22px;
     margin-bottom: 25px
 }
 header .intro-text .intro-heading {
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 50px;
@@ -273,12 +277,12 @@ header .intro-text .intro-heading {
     header .intro-text .intro-lead-in {
         font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-style: italic;
-        font-size: 30px;
+        font-size: 35px;
         line-height: 40px;
         margin-bottom: 25px
     }
     header .intro-text .intro-heading {
-        font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
         text-transform: uppercase;
         font-weight: 700;
         font-size: 60px;
@@ -484,84 +488,7 @@ section h3.section-subheading {
     }
 }
 
-/*/ ----- CONTACT SECTION ----- /*/
 
-section#contact {
-    background-color: #222;
-    background-image: url(../img/contact-image.jpg);
-    background-position: center;
-    background-repeat: no-repeat
-}
-section#contact .section-heading {
-    color: #fff
-}
-section#contact .form-group {
-    margin-bottom: 25px
-}
-section#contact .form-group input,
-section#contact .form-group textarea {
-    padding: 20px
-}
-section#contact .form-group input.form-control {
-    height: auto
-}
-section#contact .form-group textarea.form-control {
-    height: 236px
-}
-section#contact .form-control:focus {
-    border-color: #60be6c;
-    box-shadow: none
-}
-section#contact::-webkit-input-placeholder {
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #bbb
-}
-section#contact:-moz-placeholder {
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #bbb
-}
-section#contact::-moz-placeholder {
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #bbb
-}
-section#contact:-ms-input-placeholder {
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #bbb
-}
-section#contact .text-danger {
-    color: #f7aa26;
-    background-color: #333;
-}
-section#contact .contact-info {
-  font-weight: 400;
-}
-section#contact ul.address {
-  margin-top: 30px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-section#contact .contact-info ul li {
-  margin-bottom: 8px;
-}
-section#contact .contact-info ul li {
-  color: #fff;
-}
-section#contact .contact-info ul li a {
-  color: #fff;
-}
-section#contact .contact-info ul li a:hover {
-  color: #f7aa26;
-  text-decoration: none;
-}
 #google-map {
   height: 350px;
 }
@@ -621,7 +548,7 @@ ul.social-buttons li a:active {
     box-shadow: none;
     border: 0;
     min-height: 100%;
-    padding: 50px 0;
+    padding: 20px 0;
     text-align: center
 }
 .portfolio-modal .modal-content h2 {
@@ -645,12 +572,10 @@ ul.social-buttons li a:active {
     margin-bottom: 30px
 }
 .portfolio-modal .close-modal {
-    position: absolute;
     width: 75px;
-    height: 75px;
+    height: 50px;
+    margin: 20px 0 0 20px;
     background-color: transparent;
-    top: 25px;
-    right: 25px;
     cursor: pointer
 }
 .portfolio-modal .close-modal:hover {
@@ -674,6 +599,10 @@ ul.social-buttons li a:active {
     -ms-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     z-index: 1052
+}
+.portfolio-modal .close-modal:hover .lr .rl {
+   -webkit-transform: scale(1);
+    transform: scale(1);
 }
 .portfolio-modal .modal-backdrop {
     opacity: 0;
