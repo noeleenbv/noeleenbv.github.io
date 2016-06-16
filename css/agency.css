@@ -255,7 +255,7 @@
         color: #fff
     }
     header .intro-text {
-        padding-top: 165px;
+        padding-top: 170px;
         padding-bottom: 50px
     }
     header .intro-text .intro-lead-in {
@@ -497,35 +497,6 @@
         webkit-tap-highlight-color: #60be6c
     }
 
-    /* magnifying glass icon */
-    
-    .zoom p { 
-        position: absolute; 
-        top: 3px; 
-        right: 28px; 
-        padding: 5px;
-        color: #555; 
-        background-color: #fff;
-        font:bold 13px/1 sans-serif;
-    }
-
-    .zoom:after {
-        content: '';
-        display: block;
-        width: 33px;
-        height: 33px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: url("../img/icon.png");
-    }
-    .zoom img {
-        display: block;
-    }
-    .zoom img::selection {
-        background-color: transparent;
-    }
-
     /**/
 
     /*/ ----- ABOUT SECTION ----- /*/
@@ -576,8 +547,8 @@
         right: auto
     }
     .timeline>li .timeline-image {
-        height: 328px;
-        width: 270px;
+        height: 297px;
+        width: 239px;
         margin: 0 auto;
         overflow: hidden;
     }
@@ -597,8 +568,8 @@
         }
         .timeline>li .timeline-image {
             float: left;
-            height: 328px;
-            width: 270px;
+            height: 297px;
+            width: 239px;
             margin: 0 auto;
         }
     }
