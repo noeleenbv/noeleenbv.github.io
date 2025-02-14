@@ -63,30 +63,64 @@ jQuery(function($) {
 	//smoothScroll
 	smoothScroll.init();
 
-	//Google Map
-	var latitude = $('#google-map').data('latitude')
-	var longitude = $('#google-map').data('longitude')
-	function initialize_map() {
-		var myLatlng = new google.maps.LatLng(latitude,longitude);
+	// Ensure jQuery is loaded before running this script
+$(document).ready(function () {
+    // Fetch latitude and longitude from the #google-map element
+    var latitude = $('#google-map').data('latitude');
+    var longitude = $('#google-map').data('longitude');
+
+    // Check if latitude and longitude are defined
+    if (!latitude || !longitude) {
+        console.error("Latitude or longitude is missing from #google-map.");
+        return;
+    }
+
+    // Initialize the Google Map
+    function initialize_map() {
+		// Fetch latitude and longitude
+		var latitude = $('#google-map').data('latitude');
+		var longitude = $('#google-map').data('longitude');
+	
+		// Create the map centred at the given coordinates
+		var myLatlng = new google.maps.LatLng(latitude, longitude);
 		var mapOptions = {
 			zoom: 14,
 			scrollwheel: false,
 			center: myLatlng
 		};
 		var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
-		var contentString = '';
+	
+		// Content for the InfoWindow
+		var contentString = `
+			<div class="map-info">
+				<h4>Office Location</h4>
+				<p>116 Westfield Avenue<br>South Croydon<br>CR2 9JW</p>
+			</div>
+		`;
+	
+		// Create the InfoWindow
 		var infowindow = new google.maps.InfoWindow({
-			content: '<div class="map-content"><ul class="address">' + $('.address').html() + '</ul></div>'
+			content: contentString
 		});
+	
+		// Create the marker
 		var marker = new google.maps.Marker({
 			position: myLatlng,
-			map: map
+			map: map,
+			title: "Office Location"
 		});
-		google.maps.event.addListener(marker, 'click', function() {
-			infowindow.open(map,marker);
+	
+		// Show InfoWindow on marker hover (mouseover)
+		marker.addListener('mouseover', function () {
+			infowindow.open(map, marker);
+		});
+	
+		// Hide InfoWindow when the mouse leaves the marker (mouseout)
+		marker.addListener('mouseout', function () {
+			infowindow.close();
 		});
 	}
+	
+	// Trigger map initialisation on page load
 	google.maps.event.addDomListener(window, 'load', initialize_map);
 	
-});
-
