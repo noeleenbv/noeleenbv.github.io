@@ -5,9 +5,6 @@ body {
 .text-muted {
     color: #888;
 }
-.text-primary {
-    color: #60be6c;
-}
 p {
     font-size: 15px;
     line-height: 1.65;
@@ -44,6 +41,9 @@ h6 {
 }
 .img-centered {
     margin: 0 auto;
+}
+.icon-padding {
+    padding-right: 8px; /* Adjust the padding value as needed */
 }
 
 /* Renamed for British English */
