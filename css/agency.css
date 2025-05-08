@@ -72,19 +72,24 @@ h4 {
 
 /* ----- NAV SECTION ----- */
 .navbar-default {
-    background-color: rgba(34, 34, 34, 0.9);
+    background-color: rgba(34, 34, 34, 0.6);
     border-color: transparent;
+}
+/* Shrinking navbar style */
+.navbar-default .navbar-shrink {
+    height: 60px;
 }
 .navbar-default .navbar-brand {
     color: #FFFFFF;
     font-family: "Josefin+Sans", "Helvetica Neue", Helvetica, Arial, cursive;
+    display: flex; /* Ensure the parent uses Flexbox */
+    align-items: center; /* Vertically center the logo */
 }
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-brand:active {
-    color: #F7AA26;
+.navbar-default .navbar-header .logo {
+    padding: 0;
+    width: 80px;
 }
-.navbar-default .navbar-collapse {
+.navbar-default .navbar-collapse { 
     border-color: rgba(255, 255, 255);
 }
 .navbar-default .navbar-toggle {
@@ -114,10 +119,9 @@ h4 {
 /* ----- screens above 768px ----- */
 @media (min-width: 768px) {
     .navbar-default {
-        background-color: rgba(34, 34, 34, 0.7);
+        height: 100px;
         padding: 25px 0;
-        -webkit-transition: padding .3s;
-        transition: padding .3s;
+        transition: all 0.3s ease;
         border: 0;
     }
     .navbar-default .navbar-brand {
