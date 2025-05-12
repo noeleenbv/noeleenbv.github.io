@@ -49,13 +49,12 @@ h4 {
 .btn-xl {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    border-radius: 4px;
-    background-color: #F7AA26;
-    color: #333;
+    border-color: #F7AA26;
+    color: #ffffff;
     font-size: 14px;
-    font-weight: 600;
-    margin: 40px 0;
-    padding: 14px 40px;
+    font-weight: 400;
+    margin: 20px 0;
+    padding: 12px 35px;
 }
 .btn-xl:hover,
 .btn-xl:focus,
@@ -82,8 +81,12 @@ h4 {
 .navbar-default .navbar-brand {
     color: #FFFFFF;
     font-family: "Josefin+Sans", "Helvetica Neue", Helvetica, Arial, cursive;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; /* Ensure the parent uses Flexbox */
-    align-items: center; /* Vertically center the logo */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Vertically center the logo */
 }
 .navbar-default .navbar-header .logo {
     padding: 0;
@@ -93,15 +96,10 @@ h4 {
     border-color: rgba(255, 255, 255);
 }
 .navbar-default .navbar-toggle {
-    background-color: #60be6c;
-    border-color: #60be6c;
+    border-color: transparent;
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-    background-color: #60be6c;
 }
 .navbar-default .nav li a {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -111,8 +109,10 @@ h4 {
     color: #fff;
 }
 .navbar-default .nav li a:hover,
-.navbar-default .nav li a:focus {
-    color: #F7AA26;
+.navbar-default .nav li a:focus,
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #F7BE27 !important;
     outline: 0;
 }
 
@@ -121,6 +121,7 @@ h4 {
     .navbar-default {
         height: 100px;
         padding: 25px 0;
+        -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease;
         border: 0;
     }
@@ -141,7 +142,7 @@ header {
     -o-background-size: cover;
     text-align: center; 
     color: #fff;
-    padding: 250px 0;
+    padding: 200px 0;
 }
 header .intro-text {
     text-align: center;
@@ -164,7 +165,6 @@ header .intro-text .intro-lead-in {
 }
 #tohash .fa-angle-down {
     position: absolute;
-    bottom: 100px;
     left: 50%;
     color: #fff;
     display: inline-block;
@@ -175,13 +175,13 @@ header .intro-text .intro-lead-in {
     z-index: 999;
     -webkit-animation: bounce 3000ms infinite;
     animation: bounce 3000ms infinite;
+    bottom: 100px;
 }
-
 
 /* ----- screens above 768px ----- */
 @media (min-width: 768px) {
     header .intro-text {
-        margin: 405px 0;
+        margin: 100px 0;
     }
     header .intro-text .intro-heading {
         font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -198,9 +198,6 @@ header .intro-text .intro-lead-in {
         line-height: 40px;
         margin-bottom: 25px;
     } 
-    #tohash .fa-angle-down {
-        bottom: 100px;
-    }
 }
 
 /* ----- SECTIONS ----- */
@@ -381,6 +378,9 @@ section {
     -webkit-transform: rotate(90deg);
     z-index: 1052;
 }
+.portfolio-caption .row h4 {
+    padding: 40px  0 0 0;
+}
 ::-moz-selection {
     text-shadow: none;
     background: #60be6c;
@@ -406,7 +406,13 @@ body {
 .fa-brands  {
     text-align: center;
 }
+/* ----- SKILLS AND TOOLS ----- */
 
+.skills {
+
+margin: 0 0 30px 0;
+
+}
 /* ----- FOOTER SECTION ----- */
 ul.social-buttons {
     margin-bottom: 0;
