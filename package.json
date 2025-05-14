@@ -1,8 +1,8 @@
 {
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^7.0.2",
     "autoprefixer": "^10.4.21",
-    "cssnano": "^7.0.7"
+    "cssnano": "^7.0.7",
+    "postcss-pxtorem": "^6.1.0"
   },
   "dependencies": {
     "postcss-cli": "^11.0.1"
