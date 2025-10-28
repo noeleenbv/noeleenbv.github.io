@@ -6000,8 +6000,7 @@ button.close {
 }
 .modal-content {
     position: relative;
-    color: #f4f4f4;
-    background-color: rgba(51, 51, 51, 0.9);
+    background-color: rgba(51, 51, 51, 1);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid #999;

@@ -8,7 +8,7 @@ body {
 }
 
 p, li {
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.5;
     margin: 20px 0;  
 }
@@ -49,7 +49,8 @@ h4 {
     /* Adjust the padding value as needed */
 }
 
-.bg-light-gray {
+.bg-light-gray,
+.modal-body {
     background: url("../img/agsquare.png") repeat 0 0;
 }
 
@@ -57,23 +58,24 @@ h4 {
 .btn-xl {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
+    background-color: #F7AA26;
     border-color: #F7AA26;
-    color: #ffffff;
+    color: black;
     font-size: 14px;
     font-weight: 400;
     margin: 20px 0;
     padding: 12px 35px;
 }
 
-.btn-xl,
-.btn-xl:hover,
-.btn-xl:focus,
-.btn-xl:active {
+/* Hover state */
+.btn-xl:hover {
     background-color: #F7BE27;
 }
 
+/* Focus and active states */
+.btn-xl:focus,
 .btn-xl:active {
-    background-image: none;
+    background-color: #fbca42;
 }
 
 #tohash .fa-angle-down {
@@ -128,13 +130,15 @@ h4 {
     letter-spacing: 1px;
     color: #fff;
 }
-.navbar-default .navbar-nav > .active > a,
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus,
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
     background-color: #F7BE27 !important;
     outline: 0;
+}
+.navbar-default .navbar-nav > .active > a{    
+    background-color: #fbca42;
 }
 
 /* ----- screens above 768px ----- */
@@ -400,7 +404,6 @@ section {
 
 .portfolio-modal .close-modal {
     width: 75px;
-    height: 50px;
     margin: 0 auto;
     background-color: transparent;
     cursor: pointer;
@@ -459,6 +462,11 @@ img::-moz-selection {
 
 body {
     -webkit-tap-highlight-color: #60be6c;
+}
+.portfolio-case-study {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* ----- SOCIAL LINKS ----- */
