@@ -205,7 +205,7 @@ header .intro-text .intro-lead-in {
     z-index: 999;
     -webkit-animation: bounce 3000ms infinite;
     animation: bounce 3000ms infinite;
-    bottom: 100px;
+    bottom: 50px;
 }
 
 /* ----- screens above 768px ----- */
@@ -251,6 +251,7 @@ section {
     font-weight: 400;
     margin-bottom: 50px;
 }
+
 
 /* ----- PORTFOLIO THUMBNAILS ----- */
 #portfolio .row {
@@ -465,8 +466,9 @@ body {
 }
 .portfolio-case-study {
     text-align: left;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 20px 0;
 }
 
 /* ----- SOCIAL LINKS ----- */
