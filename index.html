@@ -11,7 +11,7 @@
 
     <!-- Optimised Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Droid+Serif:wght@400;700;400i;700i&family=Roboto+Slab:wght@100;300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600&family=Montserrat:wght@400;700&family=Droid+Serif:wght@400;700;400i;700i&family=Roboto+Slab:wght@100;300;400;700&display=swap"
         rel="stylesheet">
 
     <!-- Bootstrap Core CSS -->
@@ -38,24 +38,28 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
-        <div class="container">
+        <div class="portfolio-nav-inner">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
+                    data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1"
+                    aria-expanded="false" aria-label="Open navigation menu">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <img class="logo" src="img/ns-logo.png" alt="Noeleen Sisson">
+                    NS
                 </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+                <div class="menu-panel-content">
+                    <div class="menu-panel-heading">Navigation</div>
+                    <div class="menu-panel-rule" aria-hidden="true"></div>
+                <ul class="nav navbar-nav">
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -66,24 +70,35 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#skills-tools">Skills</a>
+                        <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
+                    <div class="menu-panel-socials" aria-label="Social links">
+                        <div class="menu-panel-heading">Socials</div>
+                        <div class="menu-social-links">
+                            <a href="mailto:noeleenbv@gmail.com">Email</a>
+                            <a href="https://uk.linkedin.com/in/noeleenbvs" target="_blank" rel="noopener">LinkedIn</a>
+                            <a href="https://github.com/noeleenbv" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
+        <!-- /.portfolio-nav-inner -->
     </nav>
+    <div class="menu-overlay" aria-hidden="true"></div>
 
     <!-- Header -->
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-heading" data-aos="fade-down">Noeleen Sisson</div>
-                <div class="intro-lead-in" data-aos="fade-left">Portfolio</div>
-                <a href="#portfolio" class="page-scroll btn btn-xl" data-aos="fade-right">View</a>
+                <div class="intro-heading hero-reveal">Noeleen Sisson</div>
+                <div class="intro-lead-in hero-reveal hero-reveal-delay">Designer & Developer</div>
+                <a href="#portfolio" class="page-scroll btn btn-xl hero-reveal hero-reveal-delay-long">View</a>
             </div>
         </div>
+        <div class="hero-curve" aria-hidden="true"></div>
     </header>
 
     <!-- Portfolio Grid Section -->
@@ -91,30 +106,80 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">A collection of my work pieces</h3>
+                    <h2 class="section-heading">Work</h2>
+                    <h3 class="section-subheading text-muted">Featured Projects</h3>
                 </div>
             </div>
-            <div class="row">
+            <div class="row featured-work-grid">
 
-                <!-- Portfolio items -->
+                <!-- Featured placeholder - Winetourism -->
+                <div class="col-md-6 portfolio-item featured-work-item" data-aos="fade-up" data-aos-delay="200">
+                    <a href="winetourism.html" class="portfolio-link portfolio-placeholder-link">
+                        <div class="portfolio-placeholder">
+                            <span>Coming Soon</span>
+                            <strong>Winetourism</strong>
+                        </div>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Winetourism</h4>
+                        <p class="text-muted">Case study placeholder</p>
+                    </div>
+                </div>
 
-                <!-- Portfolio item 0 -->
-                <div class="col-md-4 col-sm-6 portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                    <a href="#portfolioModal0" class="portfolio-link" data-toggle="modal">
+                <!-- Featured placeholder - Ascenta -->
+                <div class="col-md-6 portfolio-item featured-work-item" data-aos="fade-up" data-aos-delay="250">
+                    <a href="ascenta.html" class="portfolio-link portfolio-placeholder-link">
+                        <div class="portfolio-placeholder">
+                            <span>Coming Soon</span>
+                            <strong>Ascenta</strong>
+                        </div>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Ascenta</h4>
+                        <p class="text-muted">Case study placeholder</p>
+                    </div>
+                </div>
+
+                <!-- Featured project - Declare Cloud -->
+                <div class="col-md-6 portfolio-item featured-work-item" data-aos="fade-up" data-aos-delay="300">
+                    <a href="declare-cloud.html" class="portfolio-link">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                                <span>View Case Study</span>
                             </div>
                         </div>
-                        <img src="img/portfolio/declare-cloud.jpg" class="img-responsive"
+                        <img src="img/portfolio/declare-cloud-thumbnail-preview.webp" class="img-responsive"
                             alt="Declare Cloud - Branding, Web Design &amp; Development">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Declare Cloud</h4>
-                        <p class="text-muted">Branding, Web Design &amp; Development<br></br></p>
+                        <p class="text-muted">Branding, Web Design &amp; Development</p>
                     </div>
                 </div>
+
+                <!-- Featured project - Ocado Brandshops -->
+                <div class="col-md-6 portfolio-item featured-work-item" data-aos="fade-up" data-aos-delay="350">
+                    <a href="ocado-brandshops.html" class="portfolio-link">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <span>View Case Study</span>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/ocado-thumbnail-preview.webp" class="img-responsive"
+                            alt="Ocado Brandshops - microsite design and development">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Ocado — Brandshops</h4>
+                        <p class="text-muted">Microsite Design &amp; Development</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="section-subheading text-muted">Earlier Work</h3>
+            </div>
+
+            <div class="row earlier-work-grid">
 
                 <!-- Portfolio item 1 -->
                 <div class="col-md-4 col-sm-6 portfolio-item" data-aos="fade-up" data-aos-delay="200">
@@ -124,7 +189,7 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/design&develop.jpg" class="img-responsive"
+                        <img src="img/portfolio/design&develop.webp" class="img-responsive"
                             alt="Gen-Infinity landing page design">
                     </a>
                     <div class="portfolio-caption">
@@ -141,7 +206,7 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/lovefetti2.jpg" class="img-responsive" alt="Lovefetti product design">
+                        <img src="img/portfolio/lovefetti2.webp" class="img-responsive" alt="Lovefetti product design">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Lovefetti</h4>
@@ -157,7 +222,7 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/which.jpg" class="img-responsive"
+                        <img src="img/portfolio/which.webp" class="img-responsive"
                             alt="Which? Legal landing page design">
                     </a>
                     <div class="portfolio-caption">
@@ -165,23 +230,6 @@
                         <p class="text-muted">Website Landing Page Design<br></br></p>
                     </div>
                 </div>
-
-                <!-- Portfolio item 6 -->
-                <div class="col-md-4 col-sm-6 portfolio-item" data-aos="fade-up" data-aos-delay="700">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/wholegood.png" class="img-responsive"
-                            alt="Ocado microsite design &amp; development">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Ocado — Brandshops</h4>
-                        <p class="text-muted">Microsite Design &amp; Development<br></br></p>
-                    </div>
-                </div>              
 
                 <!-- Portfolio item 8 -->
                 <div class="col-md-4 col-sm-6 portfolio-item" data-aos="fade-up" data-aos-delay="900">
@@ -191,7 +239,7 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/pampers.png" class="img-responsive" alt="Pampers email design">
+                        <img src="img/portfolio/pampers.webp" class="img-responsive" alt="Pampers email design">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Ocado — Pampers</h4>
@@ -207,7 +255,7 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/huggies.png" class="img-responsive"
+                        <img src="img/portfolio/huggies.webp" class="img-responsive"
                             alt="Huggies landing Page &amp; email design">
                     </a>
                     <div class="portfolio-caption">
@@ -224,7 +272,7 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/banners.jpg" class="img-responsive" alt="Banner design">
+                        <img src="img/portfolio/banners.webp" class="img-responsive" alt="Banner design">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Ocado</h4>
@@ -240,7 +288,7 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/christmas.jpg" class="img-responsive"
+                        <img src="img/portfolio/christmas.webp" class="img-responsive"
                             alt="Ocado landing page &amp; icon design">
                     </a>
                     <div class="portfolio-caption">
@@ -276,7 +324,7 @@
                             <h2>Declare Cloud</h2>
                             <p class="item-intro text-muted">Branding, Web Design &amp; Development</p>
                             <div class="zoom portfolio-photo"><img class="img-responsive img-centered"
-                                    src="img/portfolio/declare-cloud-preview-new.jpg" alt="Declare Cloud - Branding, Web Design &amp; Development">
+                                    src="img/portfolio/declare-cloud-preview-new.webp" alt="Declare Cloud - Branding, Web Design &amp; Development">
                             </div>
                                 <div class="portfolio-case-study">
                                     <h3>Description:</h3>
@@ -345,7 +393,7 @@
                             <h2>Gen-Infinity</h2>
                             <p class="item-intro text-muted">Landing page design</p>
                             <div class="zoom portfolio-photo"><img class="img-responsive img-centered"
-                                    src="img/portfolio/design-develop-preview-new.png" alt="Gen-Infinity landing page design">
+                                    src="img/portfolio/design-develop-preview-new.webp" alt="Gen-Infinity landing page design">
                             </div>
                                 <div class="portfolio-case-study">
                                     <h3>Description:</h3>
@@ -409,7 +457,7 @@
                             <h2>Lovefetti</h2>
                             <p class="item-intro text-muted">Product packaging &amp; marketing design</p>
                             <div class="zoom portfolio-photo"><img class="img-responsive img-centered"
-                                    src="img/portfolio/lovefetti-preview.jpg"
+                                    src="img/portfolio/lovefetti-preview.webp"
                                     alt="Lovefetti packaging &amp; marketing design"></div>
                                 <div class="portfolio-case-study">
                                     <h3>Description:</h3>
@@ -450,7 +498,7 @@
                             <h2>Which?</h2>
                             <p class="item-intro text-muted">Landing page design</p>
                             <div class="zoom portfolio-photo"><img class="img-responsive img-centered"
-                                    src="img/portfolio/which-preview.jpg" alt="Which? Legal landing page design"></div>
+                                    src="img/portfolio/which-preview.webp" alt="Which? Legal landing page design"></div>
                                 <div class="portfolio-case-study">
                                     <h3>Description:</h3>        
                                         <p>A landing page design for Which? Legal Services, where I liaised between the marketing
@@ -490,7 +538,7 @@
                             <h2>Brandshops</h2>
                             <p class="item-intro text-muted">Microsite shop design &amp; development</p>
                             <div class="zoom portfolio-photo"><img class="img-responsive img-centered"
-                                    src="img/portfolio/brand-shops-preview-new.jpg"
+                                    src="img/portfolio/brand-shops-preview-new.webp"
                                     alt="Wholegood microsite shop design &amp; development"></div>
                             <div class="portfolio-case-study">
                                 <h3>Description:</h3>
@@ -557,7 +605,7 @@
                             <h2>Pampers</h2>
                             <p class="item-intro text-muted">Email design &amp; coding</p>
                             <div class="zoom portfolio-photo"><img class="img-responsive img-centered"
-                                    src="img/portfolio/pampers-preview.jpg" alt="Pampers email design &amp; coding">
+                                    src="img/portfolio/pampers-preview.webp" alt="Pampers email design &amp; coding">
                             </div>
                                 <div class="portfolio-case-study">
                                     <h3>Description:</h3>
@@ -599,7 +647,7 @@
                             <h2>Huggies</h2>
                             <p class="item-intro text-muted">Landing page, directional banner &amp; email design</p>
                             <div class="zoom portfolio-photo"><img class="img-responsive img-centered"
-                                    src="img/portfolio/huggies-preview.jpg"
+                                    src="img/portfolio/huggies-preview.webp"
                                     alt="Huggies landing page &amp; email design"></div>
                                     <div class="portfolio-case-study">
                                         <h3>Description:</h3>
@@ -636,7 +684,7 @@
                             <h2>Ocado</h2>
                             <p class="item-intro text-muted">Campaign Banners</p>
                             <div class="zoom portfolio-photo"><img class="img-responsive img-centered"
-                                    src="img/portfolio/banners-preview.jpg" alt="Banner designs"></div>
+                                    src="img/portfolio/banners-preview.webp" alt="Banner designs"></div>
                                     <div class="portfolio-case-study">
                                         <h3>Description:</h3>
                                             <p><br><Strong>Top</Strong> &#8212; Directional banners designed to support microsite events and shops on the
@@ -676,7 +724,7 @@
                             <h2>Ocado</h2>
                             <p class="item-intro text-muted">Christmas microsite shop design</p>
                             <div class="zoom portfolio-photo"><img class="img-responsive img-centered"
-                                    src="img/portfolio/christmas-preview.jpg" alt="Christmas microsite shop design">
+                                    src="img/portfolio/christmas-preview.webp" alt="Christmas microsite shop design">
                             </div>
                                 <div class="portfolio-case-study">
                                     <h3>Description:</h3>
@@ -726,64 +774,6 @@
         </div>
     </div>
 
-    <!-- Skills & Tools Section -->
-    <section id="skills-tools">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
-                    <h2 class="section-heading">Skills &amp; Tools</h2>
-                    <h3 class="section-subheading text-muted">A quick overview of my expertise</h3>
-                </div>
-            </div>
-            <div class="row" data-aos="fade-up">
-                <div class="col-md-3 col-sm-6 skills">
-                    <h4>Web design</h4>
-                    <ul class="skill-list">
-                        <li><i>/</i> Mobile-first &amp; responsive layouts</li>
-                        <li><i>/</i> Wireframing &amp; UI design in Figma</li>
-                        <li><i>/</i> Adobe Dreamweaver for visual coding</li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3 col-sm-6 skills">
-                    <h4>Front&#8209;end</h4>
-                    <ul class="skill-list">
-                        <li><i>/</i> Building responsive websites with HTML5 &amp; CSS3</li>
-                        <li><i>/</i> Basic Tailwind CSS for utility-first styling</li>
-                        <li><i>/</i> Understanding of SASS for modular CSS</li>
-                        <li><i>/</i> Integrating JavaScript plugins and libraries</li>
-                        <li><i>/</i> Version control with TortoiseGit</li>
-                        <li><i>/</i> General knowledge of GitHub for repository management &amp;
-                            collaboration</li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3 col-sm-6 skills">
-                    <h4>AI &#8211; LLMs</h4>
-                    <ul class="skill-list">
-                        <li><i>/</i> Creative and productivity use of ChatGPT &amp; Grok</li>
-                        <li><i>/</i> Prompting &amp; visual generation with Lexica, OpenArt, Stable
-                            Diffusion</li>
-                        <li><i>/</i> Workflow enhancement using AI tools</li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3 col-sm-6 skills">
-                    <h4>Graphic &amp; digital design</h4>
-                    <ul class="skill-list">
-                        <li><i>/</i> Digital &amp; print media design</li>
-                        <li><i>/</i> Adobe Photoshop, Illustrator &amp; InDesign</li>
-                        <li><i>/</i> Branding, layout design &amp; illustration</li>
-                        <li><i>/</i> Canva for fast design &amp; mockups</li>
-                        <li><i>/</i> Sketching &amp; concept art</li>
-                        <li><i>/</i> DSLR photography &amp; image editing</li>
-                    </ul>
-                </div>
-
-                <!-- /.row -->
-            </div> <!-- /.container -->
-    </section>
-
     <!-- About Me Section -->
     <section id="about" class="bg-light-gray">
         <div class="container">
@@ -810,31 +800,19 @@
                         feel free to reach out via email or mobile — I&rsquo;m excited about the opportunity to work together!
                     </p>
 
-                    <p><i class="fa-solid fa-phone"></i><span><b> Mobile: </b></span> (+44) 07878429588 </p>
-                    <p><i class="fa-solid fa-envelope"></i><span><b> Email: </b></span>
-                        <a href="mailto:noeleenbv@gmail.com"> noeleenbv@gmail.com </a>
-                    </p>
-
                     <!-- Social links -->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <ul class="list-inline social-buttons">
-                                    <li><a href="mailto:noeleenbv@gmail.com" aria-label="Email" data-aos="fade-up"
-                                            data-aos-delay="100"><i class="fa fa-envelope"></i></a></li>
-                                    <li><a href="https://uk.linkedin.com/in/noeleenbvs" target="_blank"
-                                            aria-label="LinkedIn" data-aos="fade-up" data-aos-delay="110"><i
-                                                class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="https://github.com/noeleenbv" target="_blank" aria-label="Github"
-                                            data-aos="fade-up" data-aos-delay="120"><i
-                                                class="fa-brands fa-github"></i></a></li>
-                                    <!--<li><a href="https://www.behance.net/noeleenbvs" target="_blank"
-                                            aria-label="Behance" data-aos="fade-up" data-aos-delay="130"><i
-                                                class="fa-brands fa-behance"></i></a></li>-->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <ul class="list-inline social-buttons">
+                        <li><a href="mailto:noeleenbv@gmail.com" aria-label="Email" data-aos="fade-up"
+                                data-aos-delay="100"><i class="fa fa-envelope"></i></a></li>
+                        <li><a href="https://uk.linkedin.com/in/noeleenbvs" target="_blank" aria-label="LinkedIn"
+                                data-aos="fade-up" data-aos-delay="110"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                        <li><a href="https://github.com/noeleenbv" target="_blank" aria-label="Github"
+                                data-aos="fade-up" data-aos-delay="120"><i class="fa-brands fa-github"></i></a></li>
+                        <!--<li><a href="https://www.behance.net/noeleenbvs" target="_blank"
+                                aria-label="Behance" data-aos="fade-up" data-aos-delay="130"><i
+                                    class="fa-brands fa-behance"></i></a></li>-->
+                    </ul>
                 </div>
 
                 <!-- Portrait column -->
@@ -844,13 +822,96 @@
                 </div>
 
             </div>
+            <div class="row text-center about-skills-heading" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-12">
+                    <h3>Skills &amp; Tools</h3>
+                    <p class="text-muted">A quick overview of my expertise</p>
+                </div>
+            </div>
+            <div class="row about-skills" data-aos="fade-up" data-aos-delay="150">
+                <div class="col-md-3 col-sm-6 skills">
+                    <h4>Web design</h4>
+                    <ul class="skill-list">
+                        <li><i>/</i> Mobile-first &amp; responsive layouts</li>
+                        <li><i>/</i> Wireframing &amp; UI design in Figma</li>
+                        <li><i>/</i> Adobe Dreamweaver for visual coding</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6 skills">
+                    <h4>Front&#8209;end</h4>
+                    <ul class="skill-list">
+                        <li><i>/</i> Building responsive websites with HTML5 &amp; CSS3</li>
+                        <li><i>/</i> Basic Tailwind CSS for utility-first styling</li>
+                        <li><i>/</i> Understanding of SASS for modular CSS</li>
+                        <li><i>/</i> Integrating JavaScript plugins and libraries</li>
+                        <li><i>/</i> Version control with TortoiseGit</li>
+                        <li><i>/</i> General knowledge of GitHub for repository management &amp; collaboration</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6 skills">
+                    <h4>AI &#8211; LLMs</h4>
+                    <ul class="skill-list">
+                        <li><i>/</i> Creative and productivity use of ChatGPT &amp; Grok</li>
+                        <li><i>/</i> Prompting &amp; visual generation with Lexica, OpenArt, Stable Diffusion</li>
+                        <li><i>/</i> Workflow enhancement using AI tools</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6 skills">
+                    <h4>Graphic &amp; digital design</h4>
+                    <ul class="skill-list">
+                        <li><i>/</i> Digital &amp; print media design</li>
+                        <li><i>/</i> Adobe Photoshop, Illustrator &amp; InDesign</li>
+                        <li><i>/</i> Branding, layout design &amp; illustration</li>
+                        <li><i>/</i> Canva for fast design &amp; mockups</li>
+                        <li><i>/</i> Sketching &amp; concept art</li>
+                        <li><i>/</i> DSLR photography &amp; image editing</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
 
 
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light-gray contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="section-heading">Contact</h2>
+                    <h3 class="section-subheading text-muted">Have a project in mind? I&rsquo;d love to hear from you.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <form class="contact-form" action="mailto:noeleenbv@gmail.com" method="post"
+                        enctype="text/plain">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="contact-name">Name</label>
+                                <input id="contact-name" name="name" type="text" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="contact-email">Email</label>
+                                <input id="contact-email" name="email" type="email" required>
+                            </div>
+                        </div>
+                        <label for="contact-subject">Subject</label>
+                        <input id="contact-subject" name="subject" type="text">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" rows="6" required></textarea>
+                        <button class="btn btn-xl" type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <section class="col-md-12 bg-light-gray footer-section">
+    <footer class="footer-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -858,7 +919,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
 
 
 
