@@ -38,15 +38,47 @@ $('body').scrollspy({
         var progress = Math.min(scrollY / hero.offsetHeight, 1);
         var scale = 1 + progress * 0.2;
         var translateY = progress * 28;
-        var curveY = 52 - progress * 52;
-        var curveScale = 1 + progress * 0.08;
 
         hero.style.setProperty('--hero-scale', scale.toFixed(3));
         hero.style.setProperty('--hero-y', translateY.toFixed(1) + 'px');
-        hero.style.setProperty('--hero-curve-y', curveY.toFixed(1) + '%');
-        hero.style.setProperty('--hero-curve-scale', curveScale.toFixed(3));
     }
 
     updateHeroBackground();
     window.addEventListener('scroll', updateHeroBackground, { passive: true });
+})();
+
+// Typewriter line in the hero section
+(function() {
+    var typewriter = document.querySelector('.hero-typewriter');
+
+    if (!typewriter) {
+        return;
+    }
+
+    var text = typewriter.getAttribute('data-typewriter-text') || '';
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    if (reduceMotion.matches) {
+        typewriter.textContent = text;
+        typewriter.classList.add('is-complete');
+        return;
+    }
+
+    var index = 0;
+
+    function typeNextCharacter() {
+        typewriter.textContent = text.slice(0, index);
+        index += 1;
+
+        if (index <= text.length) {
+            window.setTimeout(typeNextCharacter, 90);
+            return;
+        }
+
+        window.setTimeout(function() {
+            typewriter.classList.add('is-complete');
+        }, 700);
+    }
+
+    window.setTimeout(typeNextCharacter, 900);
 })();

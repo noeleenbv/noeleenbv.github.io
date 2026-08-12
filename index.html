@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/animate.min.css" media="print"
         onload="this.onload=null;this.removeAttribute('media');">
     <link href="css/agency.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.min.css" rel="stylesheet">
 
     <!-- Updated Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -64,7 +65,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll" href="#work">Work</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
@@ -95,10 +96,14 @@
             <div class="intro-text">
                 <div class="intro-heading hero-reveal">Noeleen Sisson</div>
                 <div class="intro-lead-in hero-reveal hero-reveal-delay">Designer & Developer</div>
-                <a href="#portfolio" class="page-scroll btn btn-xl hero-reveal hero-reveal-delay-long">View</a>
+                <p class="hero-typewriter hero-reveal hero-reveal-delay-long"
+                    data-typewriter-text="Blending technology and creativity to bring ideas to life"></p>
+                <a href="#portfolio" class="page-scroll hero-arrow hero-reveal hero-reveal-delay-long"
+                    aria-label="Scroll to portfolio">
+                    <i class="bi bi-arrow-down" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
-        <div class="hero-curve" aria-hidden="true"></div>
     </header>
 
     <!-- Portfolio Grid Section -->
@@ -106,19 +111,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <h2 class="section-heading">Work</h2>
+                    <h2 class="section-heading">Portfolio Work</h2>
                     <h3 class="section-subheading text-muted">Featured Projects</h3>
                 </div>
             </div>
             <div class="row featured-work-grid">
 
-                <!-- Featured placeholder - Winetourism -->
+                <!-- Featured project - Winetourism -->
                 <div class="col-md-6 portfolio-item featured-work-item" data-aos="fade-up" data-aos-delay="200">
-                    <a href="winetourism.html" class="portfolio-link portfolio-placeholder-link">
-                        <div class="portfolio-placeholder">
-                            <span>Coming Soon</span>
-                            <strong>Winetourism</strong>
+                    <a href="winetourism.html" class="portfolio-link">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <span>View Case Study</span>
+                            </div>
                         </div>
+                        <img src="img/portfolio/winetourism-thumbnail-preview.webp" class="img-responsive"
+                            alt="Winetourism case study preview">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Winetourism</h4>
@@ -126,13 +134,16 @@
                     </div>
                 </div>
 
-                <!-- Featured placeholder - Ascenta -->
+                <!-- Featured project - Ascenta -->
                 <div class="col-md-6 portfolio-item featured-work-item" data-aos="fade-up" data-aos-delay="250">
-                    <a href="ascenta.html" class="portfolio-link portfolio-placeholder-link">
-                        <div class="portfolio-placeholder">
-                            <span>Coming Soon</span>
-                            <strong>Ascenta</strong>
+                    <a href="ascenta.html" class="portfolio-link">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <span>View Case Study</span>
+                            </div>
                         </div>
+                        <img src="img/portfolio/ascenta-thumbnail-preview.webp" class="img-responsive"
+                            alt="Ascenta case study preview">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Ascenta</h4>
@@ -175,7 +186,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 text-center earlier-work-heading" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="section-subheading text-muted">Earlier Work</h3>
             </div>
 
@@ -775,33 +786,20 @@
     </div>
 
     <!-- About Me Section -->
-    <section id="about" class="bg-light-gray">
+    <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="100">
                     <h2 class="section-heading">About Me</h2>
-                    <h3 class="section-subheading text-muted">Who I am, what I do.</h3>
+                    <h3 class="section-subheading text-muted">Designer, maker &amp; creative thinker.</h3>
                 </div>
             </div>
-            <div class="row" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-md-8">
-                    <p>Hello and welcome to my portfolio site. This site showcases a selection of projects I&rsquo;ve worked
-                        on throughout my career, along with some personal creative endeavours.</p>
-                    <p>With over seven years of professional experience across various industries, I&rsquo;ve had the
-                        opportunity to grow in roles such as an Artworker, Print Specialist, Web Designer/Developer, and
-                        even Online Ecommerce Business Owner.</p>
-                    <p>The last 8 years I took a break from my career and focused on being a dedicated mum to my two
-                        children. Now, I&rsquo;m excited to dive back into my professional passions with renewed energy and a
-                        fresh perspective.</p>
-                    <p>I&rsquo;m particularly inspired by the rapid advancements in AI and its potential to transform
-                        industries. I look forward to embracing these innovations and integrating them into my work as I
-                        continue to grow and evolve as a creative professional.</p>
-                    <p>If you&rsquo;re interested in collaborating or have any questions, I&rsquo;d love to hear from you. Please
-                        feel free to reach out via email or mobile — I&rsquo;m excited about the opportunity to work together!
-                    </p>
-
+            <div class="row about-photo-row" data-aos="fade-up" data-aos-delay="150">
+                <div class="col-lg-12 text-center">
+                    <img class="img-circle img-responsive about-photo" src="img/about/noeleen-portrait.jpg"
+                        alt="Noeleen Sisson">
                     <!-- Social links -->
-                    <ul class="list-inline social-buttons">
+                    <ul class="list-inline social-buttons about-social-buttons">
                         <li><a href="mailto:noeleenbv@gmail.com" aria-label="Email" data-aos="fade-up"
                                 data-aos-delay="100"><i class="fa fa-envelope"></i></a></li>
                         <li><a href="https://uk.linkedin.com/in/noeleenbvs" target="_blank" aria-label="LinkedIn"
@@ -814,60 +812,75 @@
                                     class="fa-brands fa-behance"></i></a></li>-->
                     </ul>
                 </div>
-
-                <!-- Portrait column -->
-                <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <img class="img-circle img-responsive" src="img/about/noeleen-portrait.jpg" alt="Noeleen Sisson"
-                        style="margin: 0 auto; max-width: 300px;">
-                </div>
-
             </div>
+            <div class="row about-copy-row" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-12">
+                    <p>I&rsquo;m a multidisciplinary designer with a background spanning digital, web, print and
+                            ecommerce, combining strong visual design skills with an understanding of front-end
+                        development and emerging technologies.</p>
+                    <p>My career has taken me from artwork and print production through to web design, digital
+                        experiences and running my own ecommerce business. I enjoy taking ideas from initial concept
+                        through to polished design, always balancing creativity with usability and purpose.</p>
+                    <p>After taking time away from my career to raise my children, I&rsquo;ve returned to design with a
+                        fresh perspective and a renewed curiosity for how technology is changing the way we create.
+                        I&rsquo;m particularly interested in AI-assisted design and development, and how
+                        these tools can enhance rather than replace the creative process.</p>
+                    <p>I&rsquo;m always learning, experimenting and looking for better ways to turn ideas into engaging
+                        experiences.</p>
+
+                </div>
+            </div>
+            <div class="about-section-divider" aria-hidden="true"></div>
             <div class="row text-center about-skills-heading" data-aos="fade-up" data-aos-delay="100">
                 <div class="col-lg-12">
-                    <h3>Skills &amp; Tools</h3>
-                    <p class="text-muted">A quick overview of my expertise</p>
+                    <h2 class="section-heading">Skills &amp; Tools</h2>
+                    <h3 class="section-subheading text-muted">The skills behind my creative process.</h3>
                 </div>
             </div>
             <div class="row about-skills" data-aos="fade-up" data-aos-delay="150">
                 <div class="col-md-3 col-sm-6 skills">
-                    <h4>Web design</h4>
+                    <h4>UX &amp; Web Design</h4>
                     <ul class="skill-list">
-                        <li><i>/</i> Mobile-first &amp; responsive layouts</li>
-                        <li><i>/</i> Wireframing &amp; UI design in Figma</li>
-                        <li><i>/</i> Adobe Dreamweaver for visual coding</li>
+                        <li><i>/</i> Responsive &amp; mobile-first design</li>
+                        <li><i>/</i> Wireframing, UI design &amp; prototyping</li>
+                        <li><i>/</i> Figma design workflows</li>
+                        <li><i>/</i> User journeys &amp; information architecture</li>
+                        <li><i>/</i> Website optimisation &amp; iterative design</li>
                     </ul>
                 </div>
 
                 <div class="col-md-3 col-sm-6 skills">
-                    <h4>Front&#8209;end</h4>
+                    <h4>Front-end &amp; Prototyping</h4>
                     <ul class="skill-list">
-                        <li><i>/</i> Building responsive websites with HTML5 &amp; CSS3</li>
-                        <li><i>/</i> Basic Tailwind CSS for utility-first styling</li>
-                        <li><i>/</i> Understanding of SASS for modular CSS</li>
-                        <li><i>/</i> Integrating JavaScript plugins and libraries</li>
-                        <li><i>/</i> Version control with TortoiseGit</li>
-                        <li><i>/</i> General knowledge of GitHub for repository management &amp; collaboration</li>
+                        <li><i>/</i> HTML5, CSS3 &amp; responsive development</li>
+                        <li><i>/</i> Translating designs into working interfaces</li>
+                        <li><i>/</i> CSS/SASS &amp; Tailwind</li>
+                        <li><i>/</i> JavaScript integration &amp; interaction</li>
+                        <li><i>/</i> Git, GitHub &amp; version control</li>
+                        <li><i>/</i> WordPress implementation &amp; optimisation</li>
                     </ul>
                 </div>
 
                 <div class="col-md-3 col-sm-6 skills">
-                    <h4>AI &#8211; LLMs</h4>
+                    <h4>AI-assisted Design</h4>
                     <ul class="skill-list">
-                        <li><i>/</i> Creative and productivity use of ChatGPT &amp; Grok</li>
-                        <li><i>/</i> Prompting &amp; visual generation with Lexica, OpenArt, Stable Diffusion</li>
-                        <li><i>/</i> Workflow enhancement using AI tools</li>
+                        <li><i>/</i> AI-assisted ideation &amp; concept development</li>
+                        <li><i>/</i> Prompting for visual exploration</li>
+                        <li><i>/</i> Generative image workflows</li>
+                        <li><i>/</i> AI-assisted coding &amp; prototyping</li>
+                        <li><i>/</i> Using AI to accelerate design workflows</li>
                     </ul>
                 </div>
 
                 <div class="col-md-3 col-sm-6 skills">
-                    <h4>Graphic &amp; digital design</h4>
+                    <h4>Visual &amp; Brand Design</h4>
                     <ul class="skill-list">
-                        <li><i>/</i> Digital &amp; print media design</li>
-                        <li><i>/</i> Adobe Photoshop, Illustrator &amp; InDesign</li>
-                        <li><i>/</i> Branding, layout design &amp; illustration</li>
-                        <li><i>/</i> Canva for fast design &amp; mockups</li>
-                        <li><i>/</i> Sketching &amp; concept art</li>
-                        <li><i>/</i> DSLR photography &amp; image editing</li>
+                        <li><i>/</i> Brand identity &amp; visual systems</li>
+                        <li><i>/</i> Digital &amp; print design</li>
+                        <li><i>/</i> Typography &amp; layout</li>
+                        <li><i>/</i> Illustration &amp; concept development</li>
+                        <li><i>/</i> Photoshop &amp; Illustrator</li>
+                        <li><i>/</i> Photography &amp; image editing</li>
                     </ul>
                 </div>
             </div>
