@@ -71,7 +71,7 @@ $('body').scrollspy({
         index += 1;
 
         if (index <= text.length) {
-            window.setTimeout(typeNextCharacter, 90);
+            window.setTimeout(typeNextCharacter, 75);
             return;
         }
 
@@ -81,4 +81,63 @@ $('body').scrollspy({
     }
 
     window.setTimeout(typeNextCharacter, 900);
+})();
+
+// Submit the contact form without leaving the page.
+(function() {
+    var form = document.querySelector('.contact-form');
+
+    if (!form || !window.fetch) {
+        return;
+    }
+
+    var status = form.querySelector('.contact-form-status');
+    var submitButton = form.querySelector('button[type="submit"]');
+    var successMessage = "Thanks! Your message has been sent.";
+    var errorMessage = "Sorry, something went wrong. Please try again.";
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        if (status) {
+            status.textContent = '';
+            status.classList.remove('is-error');
+        }
+
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+        }
+
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: {
+                Accept: 'application/json'
+            }
+        })
+            .then(function(response) {
+                if (!response.ok) {
+                    throw new Error('Form submission failed');
+                }
+
+                form.reset();
+
+                if (status) {
+                    status.textContent = successMessage;
+                }
+            })
+            .catch(function() {
+                if (status) {
+                    status.textContent = errorMessage;
+                    status.classList.add('is-error');
+                }
+            })
+            .finally(function() {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Send Message';
+                }
+            });
+    });
 })();

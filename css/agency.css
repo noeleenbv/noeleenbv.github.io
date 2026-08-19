@@ -21,7 +21,7 @@ a:active {
 }
 
 a {
-    color: #60be6c;
+    color: #F7AA26;
     -webkit-transition: all 300ms ease 0s;
     transition: all 300ms ease 0s;
 }
@@ -29,7 +29,8 @@ a {
 a:hover,
 a:focus,
 a:active {
-    color: #60be6c;
+    color: #F7BE27;
+    text-decoration: none;
 }
 
 h2,
@@ -746,7 +747,7 @@ header .intro-text .intro-heading {
 }
 
 header .intro-text .intro-lead-in {
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: inline-block;
     font-style: italic;
     font-size: 30px;
@@ -896,7 +897,7 @@ header .intro-text .btn-xl {
     }
 
     header .intro-text .intro-lead-in {
-        font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-style: italic;
         font-size: 44px;
         line-height: 1.2;
@@ -1001,16 +1002,34 @@ section > .container,
 
 .section-subheading {
     font-size: 20px;
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: none;
     font-style: italic;
     font-weight: 400;
     margin-bottom: 50px;
 }
 
+.section-subheading.text-muted {
+    align-items: center;
+    display: flex;
+    gap: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.section-subheading.text-muted::before,
+.section-subheading.text-muted::after {
+    background: rgba(34, 34, 34, 0.14);
+    content: "";
+    flex: 1;
+    height: 1px;
+}
+
 
 /* ----- PORTFOLIO THUMBNAILS ----- */
-#portfolio .row {
+#work .row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1024,54 +1043,54 @@ section > .container,
     align-items: center;
 }
 
-#portfolio .featured-work-grid,
-#portfolio .earlier-work-grid {
+#work .featured-work-grid,
+#work .earlier-work-grid {
     margin-left: auto;
     margin-right: auto;
     max-width: 1400px;
     width: 100%;
 }
 
-#portfolio .portfolio-item {
+#work .portfolio-item {
     margin: 0 0 15px;
     right: 0;
 }
 
-#portfolio .portfolio-section-heading {
+#work .portfolio-section-heading {
     margin: 10px 0 28px;
     text-align: center;
     width: 100%;
 }
 
-#portfolio .portfolio-section-heading h3 {
+#work .portfolio-section-heading h3 {
     color: #222;
     font-size: 24px;
     letter-spacing: 1px;
     margin: 0;
 }
 
-#portfolio .earlier-work-heading {
+#work .earlier-work-heading {
     margin-top: 60px;
 }
 
-#portfolio .featured-work-item {
+#work .featured-work-item {
     max-width: 640px;
 }
 
-#portfolio .featured-work-item .portfolio-link,
-#portfolio .featured-work-item .portfolio-caption {
+#work .featured-work-item .portfolio-link,
+#work .featured-work-item .portfolio-caption {
     max-width: 640px;
 }
 
-#portfolio .portfolio-item .portfolio-link {
+#work .portfolio-item .portfolio-link {
     display: block;
     position: relative;
     max-width: 420px;
     margin: 0 auto;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
-    background: rgba(247, 170, 38, .9);
+#work .portfolio-item .portfolio-link .portfolio-hover {
+    background: rgba(247, 170, 38, .95);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1083,11 +1102,11 @@ section > .container,
     -ms-transition: all ease .5s;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+#work .portfolio-item .portfolio-link .portfolio-hover:hover {
     opacity: 1;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+#work .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
     position: absolute;
     width: 100%;
     height: 20px;
@@ -1098,30 +1117,30 @@ section > .container,
     color: #fff;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+#work .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
     margin-top: -12px;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content span {
+#work .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content span {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 500;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    text-transform: titlecase;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+#work .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#work .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
     margin: 0;
 }
 
-#portfolio .portfolio-placeholder-link {
+#work .portfolio-placeholder-link {
     background: #222;
     color: #fff;
     text-decoration: none;
 }
 
-#portfolio .portfolio-placeholder {
+#work .portfolio-placeholder {
     align-items: center;
     aspect-ratio: 16 / 9;
     display: flex;
@@ -1132,7 +1151,7 @@ section > .container,
     text-align: center;
 }
 
-#portfolio .portfolio-placeholder span {
+#work .portfolio-placeholder span {
     color: #F7BE27;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
@@ -1142,7 +1161,7 @@ section > .container,
     text-transform: uppercase;
 }
 
-#portfolio .portfolio-placeholder strong {
+#work .portfolio-placeholder strong {
     color: #fff;
     font-family: "Geist", "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 44px;
@@ -1150,15 +1169,19 @@ section > .container,
     line-height: 1;
 }
 
-#portfolio .portfolio-item .portfolio-caption {
+#work .portfolio-item .portfolio-caption {
     max-width: 420px;
     margin: 0 auto;
     background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 140px;
     text-align: center;
     padding: 25px;
 }
 
-#portfolio .portfolio-item .portfolio-caption h4 {
+#work .portfolio-item .portfolio-caption h4 {
     text-transform: none;
     margin: 0;
     color: #f4f4f4;
@@ -1166,15 +1189,15 @@ section > .container,
     font-size: 20px;
 }
 
-#portfolio .portfolio-item .portfolio-caption p {
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+#work .portfolio-item .portfolio-caption p {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
     font-size: 16px;
     margin: 0;
     color: #aaa;
 }
 
-#portfolio * {
+#work * {
     z-index: 2;
 }
 
@@ -1185,27 +1208,27 @@ section > .container,
 }
 
 @media (min-width: 767px) {
-    #portfolio .portfolio-item {
+    #work .portfolio-item {
         margin: 0 0 30px;
     }
 
-    #portfolio .portfolio-item .portfolio-link {
+    #work .portfolio-item .portfolio-link {
         max-width: 800px;
     }
 
-    #portfolio .portfolio-item .portfolio-caption {
+    #work .portfolio-item .portfolio-caption {
         max-width: 800px;
     }
 }
 
 @media (min-width: 992px) {
-    #portfolio > .container {
+    #work > .container {
         max-width: 1400px;
     }
 
-    #portfolio .featured-work-item,
-    #portfolio .featured-work-item .portfolio-link,
-    #portfolio .featured-work-item .portfolio-caption {
+    #work .featured-work-item,
+    #work .featured-work-item .portfolio-link,
+    #work .featured-work-item .portfolio-caption {
         max-width: 700px;
     }
 
@@ -1234,7 +1257,7 @@ section > .container,
 
 .portfolio-modal .modal-content .item-intro {
     margin: 20px 0 30px;
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
     font-size: 16px;
 }
@@ -1616,12 +1639,12 @@ body.menu-open .footer-section {
 
 ::-moz-selection {
     text-shadow: none;
-    background: #60be6c;
+    background: #F7BE27;
 }
 
 ::selection {
     text-shadow: none;
-    background: #60be6c;
+    background: #F7BE27;
 }
 
 img::-moz-selection {
@@ -1637,7 +1660,7 @@ img::-moz-selection {
 }
 
 body {
-    -webkit-tap-highlight-color: #60be6c;
+    -webkit-tap-highlight-color: #F7BE27;
 }
 .portfolio-case-study {
     text-align: left;
@@ -1646,11 +1669,16 @@ body {
     padding: 20px 0;
 }
 
-.portfolio-case-study {
-    text-align: left;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px 0;
+.portfolio-case-study p {
+    color: #444;
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+.portfolio-case-study li {
+    color: #444;
+    font-size: 18px;
+    line-height: 1.65;
 }
 
 /* ----- SOCIAL LINKS ----- */
@@ -1717,7 +1745,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: #60be6c;
+    background-color: #F7BE27;
 }
 
 .btn:focus,
@@ -1738,7 +1766,7 @@ ul.social-buttons li a:active {
 }
 
 .about-skills-heading {
-    margin-top: 0;
+    margin-top: 58px;
 }
 
 .about-skills {
@@ -1751,8 +1779,8 @@ ul.social-buttons li a:active {
     line-height: 1.75;
 }
 
-.about-photo-row {
-    margin-bottom: 45px;
+.about-photo-column {
+    margin-top: 20px;
 }
 
 .about-photo {
@@ -1767,9 +1795,18 @@ ul.social-buttons li a:active {
 }
 
 .about-copy-row {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     max-width: 1400px;
+}
+
+@media (max-width: 991px) {
+    .about-photo-column {
+        margin-top: 35px;
+    }
 }
 
 .about-section-divider {
@@ -1786,7 +1823,7 @@ ul.social-buttons li a:active {
 
 .contact-form {
     margin: 0 auto;
-    max-width: 760px;
+    width: 100%;
 }
 
 .contact-form label {
@@ -1828,4 +1865,17 @@ ul.social-buttons li a:active {
 .contact-form .btn-xl {
     display: block;
     margin: 10px auto 0;
+}
+
+.contact-form-status {
+    color: #222;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 20px 0 0;
+    text-align: center;
+}
+
+.contact-form-status.is-error {
+    color: #a94442;
 }
